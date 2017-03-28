@@ -2,8 +2,8 @@
 A top-down 2D game, where you play a dog leading a human through a maze.  
 This was created as an example project for the Monogame Getting Started Guide.
 
-![](https://github.com/MrGrak/RescueDog/blob/master/rescueDogCapture1.gif)  
-![](https://github.com/MrGrak/RescueDog/blob/master/rescueDogCapture2.gif)  
+![](https://github.com/MrGrak/RescueDog/blob/master/rescueDogCapture1.gif)
+![](https://github.com/MrGrak/RescueDog/blob/master/rescueDogCapture2.gif)
 
 ## Project Structure
 The game's class files are located in the OpenGL project folder.  
