@@ -1,22 +1,27 @@
 # RescueDog
-A top-down 2D game, where you play a dog leading a human through a maze.  
+A top-down 2D game, where you play a dog leading a human through a cave-like maze.  
 This was created as an example project for the Monogame Getting Started Guide.
 
 ![](https://github.com/MrGrak/RescueDog/blob/master/rescueDogCapture1.gif)
 ![](https://github.com/MrGrak/RescueDog/blob/master/rescueDogCapture2.gif)
 
-## Project Structure
-The game's class files are located in the OpenGL project folder.  
-The DirectX project references these game classes.  
-The game classes are platform and target agnostic.
+
+## Targets and Platforms
++ RescueDog runs on DirectX, OpenGL, and Windows 10 UWP.  
++ This is done using a shared codebase, with no platform specific code at all.
++ The only difference between the DirectX, OpenGL, and UWP versions is the graphics backend.
++ This graphics backend is entirely managed by MonoGame.
+
+## Shared Class Files
++ The game's class files are located in the RescueDogClasses folder.
++ The DirectX, OpenGL, and UWP projects references these classes.
++ The class files are platform and target agnostic.
+
+## Duplicated Asset Files
++ The game's assets (images, fonts, sounds) are located in the Content folder.  
++ However, each project duplicates the game assets using it's own Content.mgcb.  
++ This design choice made it easier to properly build the game assets per platform.  
 
 ## ToDo
-+ update projects to use Monogame 3.6
-+ move game classes outside of OpenGL project into their own folder
-+ setup all projects to reference classes from the game classes folder
-+ port RescueDog to UWP, deploy and test on Xbox One
-+ don't reload the monogame logo each time the boot screen is created
-+ minimize garbage in the create level function
-+ only use 1 rectangle to perform camera view culling (simplify)
-+ various code refactoring (GameManager.cs, for example)
-
++ test game on Xbox One
++ various code refactoring
