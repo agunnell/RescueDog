@@ -10,11 +10,11 @@ This was created as an example project for the Monogame Getting Started Guide.
 + RescueDog runs on DirectX, OpenGL, and Windows 10 UWP.  
 + This is done using a shared codebase, with no platform specific code at all.
 + The only difference between the DirectX, OpenGL, and UWP versions is the graphics backend.
-+ This graphics backend is entirely managed by MonoGame.
++ The graphics backend is entirely managed by MonoGame.
 
 ## Shared Class Files
 + The game's class files are located in the RescueDogClasses folder.
-+ The DirectX, OpenGL, and UWP projects references these classes.
++ The DirectX, OpenGL, and UWP projects reference these classes.
 + The class files are platform and target agnostic.
 
 ## Duplicated Asset Files
