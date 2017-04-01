@@ -34,4 +34,4 @@ These notes discuss various aspects of the game and it's development.
 + the floors and wall objects are created.
 + the spawn, exit, and wall decoration objects are created.
 + the level is zDepth sorted and the player is moved to spawn.
-(i've since written much better/faster level generation algorithms)
++ (i've since written much better/faster level generation algorithms, pls forgive)
