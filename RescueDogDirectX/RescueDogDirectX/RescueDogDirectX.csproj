@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{59B138E1-3F1F-4A72-A5E4-DB22B30052BB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RescueDogDirectX</RootNamespace>
+    <AssemblyName>RescueDogDirectX</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MonoGamePlatform>Windows</MonoGamePlatform>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\$(MonoGamePlatform)\$(Platform)\$(Configuration)\</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="..\..\RescueDogClasses\Actor.cs">
+      <Link>Classes\Actor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\BootScreen.cs">
+      <Link>Classes\BootScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Button.cs">
+      <Link>Classes\Button.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Camera2D.cs">
+      <Link>Classes\Camera2D.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Editor.cs">
+      <Link>Classes\Editor.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Game1.cs">
+      <Link>Classes\Game1.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\GameManager.cs">
+      <Link>Classes\GameManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\GameObject.cs">
+      <Link>Classes\GameObject.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\GameScreen.cs">
+      <Link>Classes\GameScreen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\InputHelper.cs">
+      <Link>Classes\InputHelper.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Level.cs">
+      <Link>Classes\Level.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\LevelGenerator.cs">
+      <Link>Classes\LevelGenerator.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Room.cs">
+      <Link>Classes\Room.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Screen.cs">
+      <Link>Classes\Screen.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\ScreenManager.cs">
+      <Link>Classes\ScreenManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\SoundManager.cs">
+      <Link>Classes\SoundManager.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Sprite.cs">
+      <Link>Classes\Sprite.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Text.cs">
+      <Link>Classes\Text.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\TitleWidget.cs">
+      <Link>Classes\TitleWidget.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\Wall.cs">
+      <Link>Classes\Wall.cs</Link>
+    </Compile>
+    <Compile Include="..\..\RescueDogClasses\WonScreen.cs">
+      <Link>Classes\WonScreen.cs</Link>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MonoGame.Framework">
+      <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\Windows\MonoGame.Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <MonoGameContentReference Include="Content\Content.mgcb" />
+    <None Include="app.manifest" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
